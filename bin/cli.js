@@ -281,7 +281,17 @@ function cmdConnect() {
 
   ws.on('error', (err) => {
     if (isRaw) process.stdin.setRawMode(false);
-    console.error('\n\x1b[31m%s\x1b[0m', `WebSocket Error: ${err.message}`);
+    if (err.message && err.message.includes('403')) {
+      console.error('\n\x1b[31m%s\x1b[0m', '✖ Akses Ditolak (403 Forbidden): Sesi otentikasi CLI Anda telah dicabut atau kedaluwarsa.');
+      console.log('Silakan hubungkan ulang perangkat Anda dengan perintah:');
+      console.log('\x1b[1m\x1b[32m%s\x1b[0m\n', '  npx github:irhamkaraman/cloudhub-labti-cli login');
+      // Otomatis bersihkan kredensial lama yang sudah tidak valid
+      try {
+        if (fs.existsSync(CREDENTIALS_FILE)) fs.unlinkSync(CREDENTIALS_FILE);
+      } catch (e) {}
+    } else {
+      console.error('\n\x1b[31m%s\x1b[0m', `WebSocket Error: ${err.message}`);
+    }
     process.exit(1);
   });
 
