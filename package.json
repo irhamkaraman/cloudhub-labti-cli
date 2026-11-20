@@ -1,0 +1,31 @@
+{
+  "name": "cloudhub-labti-cli",
+  "version": "1.0.0",
+  "description": "Official Command-Line Interface (CLI) for CloudHub Lab TI UMPO",
+  "main": "bin/cli.js",
+  "bin": {
+    "cloudhub": "./bin/cli.js",
+    "cloudhub-cli": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node ./bin/cli.js"
+  },
+  "keywords": [
+    "cloudhub",
+    "labti",
+    "umpo",
+    "cli",
+    "ssh",
+    "terminal",
+    "tunnel",
+    "websocket"
+  ],
+  "author": "Irham Karaman & Lab TI UMPO Core Team",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
