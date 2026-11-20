@@ -53,5 +53,5 @@ Buka VS Code -> Tekan `F1` -> Pilih **Remote-SSH: Connect to Host...** -> Pilih 
 ---
 
 ## 🛡️ Lisensi & Hak Cipta
-Dikembangkan oleh **Bos Irham Karaman & Laboratorium Teknik Informatika Universitas Muhammadiyah Ponorogo**.  
+Dikembangkan di **Laboratorium Teknik Informatika Universitas Muhammadiyah Ponorogo**.  
 Lisensi: **MIT**.

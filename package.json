@@ -20,7 +20,7 @@
     "tunnel",
     "websocket"
   ],
-  "author": "Irham Karaman & Lab TI UMPO Core Team",
+  "author": "Laboratorium Teknik Informatika UMPO",
   "license": "MIT",
   "dependencies": {
     "ws": "^8.18.0"
